@@ -1,0 +1,33 @@
+# telegram-redirect-2
+Telegram yönləndirmə linki (iOS üçün uyğun)
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const isTikTok = navigator.userAgent.toLowerCase().includes("tiktok");
+
+      const targetUrl = "https://t.me/+YhciChwZpilhOTJk"; // <— BURANI ÖZ TELEGRAM LİNKİN İLƏ DƏYİŞMƏ!
+      const fallback = "https://google.com";
+
+      if (isTikTok) {
+        // Əvvəlcə google-a yönləndir sonra linki orda aç
+        window.location.href = fallback;
+        setTimeout(() => {
+          const newWindow = window.open(targetUrl, "_blank");
+          if (!newWindow) {
+            alert("Linki açmaq üçün brauzerdə aç düyməsinə bas!");
+          }
+        }, 1500);
+      } else {
+        // Əgər TikTok deyilsə birbaşa yönləndir
+        window.location.href = targetUrl;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Yönləndirilirsiz...</p>
+  </body>
+</html>
