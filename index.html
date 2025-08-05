@@ -5,20 +5,32 @@ Telegram yönləndirmə linki (iOS üçün uyğu>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yönləndirmə səhifəsi</title>
-  <script>
-    function tryRedirect() {
-      const target = "https://t.me/+YhciChwZpilhOTJk";
-      window.location.href = target;
+  <title>Telegram link</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f9f9f9;
     }
-    window.onload = function() {
-      setTimeout(tryRedirect, 1000);
+    a.button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 20px;
+      color: white;
+      background-color: #0088cc;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 30px;
     }
-  </script>
+    a.button:hover {
+      background-color: #006699;
+    }
+  </style>
 </head>
 <body>
-  <h2>Yönləndirilirsiniz...</h2>
-  <p>Əgər avtomatik yönləndirmə olmazsa, aşağıdakı linkə klikləyin:</p>
-  <a href="https://t.me/+YhciChwZpilhOTJk" target="_blank" style="font-size:20px; color:blue;">Telegram Kanalına Get</a>
+  <h1>Telegram kanalına keçmək üçün aşağıdakı düyməyə klikləyin</h1>
+  <a href="https://t.me/+YhciChwZpilhOTJk" target="_blank" class="button">Telegram Kanalı</a>
+  <p style="margin-top:20px;">Əgər avtomatik yönləndirmə işləmir, narahat olmayın, sadəcə düyməyə klikləyin.</p>
 </body>
 </html>
